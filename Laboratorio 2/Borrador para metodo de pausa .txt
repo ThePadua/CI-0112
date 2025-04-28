@@ -1,0 +1,21 @@
+Borrador para metodo de pausa 
+// Espacio para implementacion de metodo para ver el estado de batalla 
+            System.out.println(" Para obtener el estado actual de la batalla presione 'P' " );
+            Scanner input = new Scanner (System.in);
+            String pausa = input.nextLine();
+            if ( pausa == "p" || pausa == "P") {
+                estadoBatalla();
+                System.out.println(" Para reanudar la simulacion presione enter ");
+                input.nextLine();
+                continue;
+            }
+            // Espacio cierra (nueva edicion)
+
+    // Metodo estado actual para visualizar la informacion de los robots no destruidos para parte de puntos extra
+    public void estadoBatalla() {
+        for(int i = 0; i <numeroRobots; i++) {
+            if (robots[i].estaVivo()) {
+                System.out.println(" El robot " + robots[i].getNombre() + " sigue activo " + "\n" + " Tiene " + robots[i].getPuntosVida() + " puntos de vida ");
+            }
+        }
+    }
